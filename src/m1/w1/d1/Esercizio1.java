@@ -1,3 +1,5 @@
+package m1.w1.d1;
+
 public class Esercizio1 {
 
     public static int moltiplica(int a, int b) {

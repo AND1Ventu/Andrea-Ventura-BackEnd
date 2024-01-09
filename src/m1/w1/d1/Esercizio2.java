@@ -1,3 +1,5 @@
+package m1.w1.d1;
+
 import java.util.Scanner;
 
 public class Esercizio2 {
