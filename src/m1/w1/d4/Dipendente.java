@@ -98,10 +98,6 @@ public class Dipendente {
     public static double calcolaPaga(Dipendente dipendente, int oreStraordinario) {
         return dipendente.stipendio + (dipendente.importoOrarioStraordinario * oreStraordinario);
     }
-}
-
-
-public class GestioneDipendenti {
 
     public static void main(String[] args) {
         // Istanzia 4 dipendenti
