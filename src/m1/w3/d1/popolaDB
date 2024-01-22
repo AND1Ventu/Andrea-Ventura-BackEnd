@@ -1,0 +1,31 @@
+-- Inserimento dati nella tabella Clienti
+INSERT INTO Clienti (NumeroCliente, Nome, Cognome, "Anno di Nascita", RegioneResidenza)
+VALUES
+  (1, 'Mario', 'Rossi', 1982, 'Lombardia'),
+  (2, 'Luigi', 'Verdi', 1980, 'Veneto'),
+  (3, 'Anna', 'Bianchi', 1982, 'Lazio'),
+  (4, 'Maria', 'Gialli', 1978, 'Toscana');
+
+-- Inserimento dati nella tabella Prodotti
+INSERT INTO Prodotti (IdProdotto, Descrizione, InProduzione, InCommercio, DataAttivazione, DataDisattivazione)
+VALUES
+  (101, 'Prodotto A', TRUE, TRUE, '2016-12-01', '2018-06-30'),
+  (102, 'Prodotto B', FALSE, TRUE, '2017-05-15', '2020-02-28'),
+  (103, 'Prodotto C', TRUE, FALSE, '2018-02-10', NULL),
+  (104, 'Prodotto D', TRUE, TRUE, '2017-08-20', NULL);
+
+-- Inserimento dati nella tabella Fornitori
+INSERT INTO Fornitori (NumeroFornitore, Denominazione, RegioneResidenza)
+VALUES
+  (201, 'Fornitore X', 'Lombardia'),
+  (202, 'Fornitore Y', 'Veneto'),
+  (203, 'Fornitore Z', 'Lazio');
+
+-- Inserimento dati nella tabella Fatture
+INSERT INTO Fatture (NumeroFattura, Tipologia, Importo, Iva, IdCliente, DataFattura, NumeroFornitore)
+VALUES
+  (1001, 'A', 800, 20, 1, '2022-01-10', 201),
+  (1002, 'B', 1200, 10, 2, '2022-02-15', 202),
+  (1003, 'A', 950, 20, 3, '2022-03-20', 203),
+  (1004, 'C', 600, 20, 1, '2022-04-25', 201),
+  (1005, 'A', 1100, 20, 4, '2022-05-30', 202);

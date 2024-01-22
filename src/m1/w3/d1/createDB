@@ -1,0 +1,34 @@
+CREATE TABLE Clienti (
+    NumeroCliente INT PRIMARY KEY,
+    Nome VARCHAR(50),
+    Cognome VARCHAR(50),
+    "Anno di Nascita" INT,
+    RegioneResidenza VARCHAR(50)
+);
+
+CREATE TABLE Prodotti (
+    IdProdotto INT PRIMARY KEY,
+    Descrizione VARCHAR(100),
+    InProduzione BOOLEAN,
+    InCommercio BOOLEAN,
+    DataAttivazione DATE,
+    DataDisattivazione DATE
+);
+
+CREATE TABLE Fornitori (
+    NumeroFornitore INT PRIMARY KEY,
+    Denominazione VARCHAR(100),
+    RegioneResidenza VARCHAR(50)
+);
+
+CREATE TABLE Fatture (
+    NumeroFattura INT PRIMARY KEY,
+    Tipologia VARCHAR(50),
+    Importo DECIMAL(10, 2),
+    Iva DECIMAL(5, 2),
+    IdCliente INT,
+    DataFattura DATE,
+    NumeroFornitore INT,
+    FOREIGN KEY (IdCliente) REFERENCES Clienti(NumeroCliente),
+    FOREIGN KEY (NumeroFornitore) REFERENCES Fornitori(NumeroFornitore)
+);

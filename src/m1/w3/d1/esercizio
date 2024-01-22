@@ -1,0 +1,52 @@
+-- Estrai tutti i clienti con nome Mario
+SELECT * FROM Clienti WHERE Nome = 'Mario';
+
+-- Estrarre il nome e il cognome dei clienti nati nel 1982
+SELECT Nome, Cognome FROM Clienti WHERE "Anno di Nascita" = 1982;
+
+-- Estrarre il numero delle fatture con IVA al 20%
+SELECT COUNT(*) AS NumeroFatture20Percent FROM Fatture WHERE Iva = 20;
+
+-- Estrarre i prodotti attivati nel 2017 e che sono in produzione oppure in commercio
+SELECT * FROM Prodotti WHERE EXTRACT(YEAR FROM DataAttivazione) = 2017 AND (InProduzione = TRUE OR InCommercio = TRUE);
+
+-- Estrarre le fatture con importo inferiore a 1000 e i dati dei clienti ad esse collegate
+SELECT Fatture.NumeroFattura, Fatture.Importo, Fatture.Iva, Fatture.DataFattura, Clienti.Nome, Clienti.Cognome
+FROM Fatture
+JOIN Clienti ON Fatture.IdCliente = Clienti.NumeroCliente
+WHERE Fatture.Importo < 1000;
+
+-- Riportare l’elenco delle fatture (numero, importo, iva e data) con in aggiunta il nome del fornitore
+SELECT Fatture.NumeroFattura, Fatture.Importo, Fatture.Iva, Fatture.DataFattura, Fornitori.Denominazione AS NomeFornitore
+FROM Fatture
+JOIN Fornitori ON Fatture.NumeroFornitore = Fornitori.NumeroFornitore;
+
+-- Considerando soltanto le fatture con IVA al 20 per cento, estrarre il numero di fatture per ogni anno
+SELECT EXTRACT(YEAR FROM DataFattura) AS Anno, COUNT(*) AS NumeroFatture20Percent
+FROM Fatture
+WHERE Iva = 20
+GROUP BY Anno;
+
+-- Riportare il numero di fatture e la somma dei relativi importi divisi per anno di fatturazione
+SELECT EXTRACT(YEAR FROM DataFattura) AS Anno, COUNT(*) AS NumeroFatture, SUM(Importo) AS SommaImporti
+FROM Fatture
+GROUP BY Anno;
+
+-- [EXTRA] Estrarre gli anni in cui sono state registrate più di 2 fatture con tipologia 'A'
+SELECT EXTRACT(YEAR FROM DataFattura) AS Anno
+FROM Fatture
+WHERE Tipologia = 'A'
+GROUP BY Anno
+HAVING COUNT(*) > 2;
+
+-- [EXTRA] Estrarre il totale degli importi delle fatture divisi per residenza dei clienti
+SELECT Clienti.RegioneResidenza, SUM(Fatture.Importo) AS TotaleImporti
+FROM Fatture
+JOIN Clienti ON Fatture.IdCliente = Clienti.NumeroCliente
+GROUP BY Clienti.RegioneResidenza;
+
+-- [EXTRA] Estrarre il numero dei clienti nati nel 1980 che hanno almeno una fattura superiore a 50 euro
+SELECT COUNT(DISTINCT Clienti.NumeroCliente) AS NumeroClienti
+FROM Clienti
+JOIN Fatture ON Clienti.NumeroCliente = Fatture.IdCliente
+WHERE Clienti."Anno di Nascita" = 1980 AND Fatture.Importo > 50;
