@@ -16,6 +16,10 @@ FROM Fatture
 JOIN Clienti ON Fatture.IdCliente = Clienti.NumeroCliente
 WHERE Fatture.Importo < 1000;
 
+
+SELECT * FROM public.fatture f INNER JOIN public.clienti c ON f.id_cliente = c.numero_cliente WHERE f.importo<1000;
+
+
 -- Riportare l’elenco delle fatture (numero, importo, iva e data) con in aggiunta il nome del fornitore
 SELECT Fatture.NumeroFattura, Fatture.Importo, Fatture.Iva, Fatture.DataFattura, Fornitori.Denominazione AS NomeFornitore
 FROM Fatture

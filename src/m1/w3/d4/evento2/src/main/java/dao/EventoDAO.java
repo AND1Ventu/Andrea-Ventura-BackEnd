@@ -1,3 +1,7 @@
+package dao;
+
+import entities.Evento;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -8,8 +12,12 @@ public class EventoDAO {
     private EntityManager entityManager;
 
     public EventoDAO() {
-        this.entityManagerFactory = Persistence.createEntityManagerFactory("GestioneEventiPU");
+        this.entityManagerFactory = Persistence.createEntityManagerFactory("GestoreEventiPU");
         this.entityManager = entityManagerFactory.createEntityManager();
+    }
+
+    public EventoDAO(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 
     public void save(Evento evento) {
@@ -22,9 +30,10 @@ public class EventoDAO {
         return entityManager.find(Evento.class, id);
     }
 
-    public void delete(Evento evento) {
+    public void delete(Long id) {
         entityManager.getTransaction().begin();
-        entityManager.remove(evento);
+        Evento e = getById(id);
+        entityManager.remove(e);
         entityManager.getTransaction().commit();
     }
 

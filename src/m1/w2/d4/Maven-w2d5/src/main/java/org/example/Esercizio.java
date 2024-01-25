@@ -1,11 +1,10 @@
 package org.example;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import org.apache.commons.io.FileUtils;
-import java.io.File;
-import java.io.IOException;
+
 
 
 public class Esercizio {
@@ -24,8 +23,7 @@ public class Esercizio {
         List<Order> orders = List.of(order1, order2, order3);
 
         // Raggruppamento degli ordini per cliente utilizzando Stream e Lambda Expressions
-        Map<Customer, List<Order>> ordersByCustomer = orders.stream()
-                .collect(Collectors.groupingBy(Order::getCustomer));
+        Map<Customer, List<Order>> ordersByCustomer = orders.stream().collect(Collectors.groupingBy(Order::getCustomer));
 
         // Stampa dei risultati
         ordersByCustomer.forEach((customer, orderList) -> {
@@ -58,13 +56,14 @@ public class Esercizio {
 
         // Calcolo del totale delle vendite per ogni cliente utilizzando Stream e Lambda Expressions
         Map<Customer, Double> salesByCustomer = orders.stream()
-                .collect(Collectors.groupingBy(Order::getCustomer, Collectors.summingDouble(Order::getTotalSales)));
+                .collect(Collectors.groupingBy(Order::getCustomer,
+                        Collectors.summingDouble(o -> o.getProducts().stream().
+                                mapToDouble(Product::getPrice).sum())));
 
         // Stampa dei risultati
         salesByCustomer.forEach((customer, totalSales) ->
                 System.out.println("Customer: " + customer.getName() + ", Total Sales: " + totalSales));
     }
-
 
     public static void Esercizio3(String[] args) {
         // Creazione di alcuni oggetti Customer, Product e Order per il test
@@ -136,3 +135,11 @@ public class Esercizio {
         totalAmountByCategory.forEach((category, totalAmount) ->
                 System.out.println("Category: " + category + ", Total Amount: " + totalAmount));
     }
+
+    public static void main(String[] args) {
+        // Creare un'istanza di Esercizio e chiamare il metodo Esercizio1
+        Esercizio esercizioInstance = new Esercizio();
+        esercizioInstance.Esercizio1();
+    }
+
+}

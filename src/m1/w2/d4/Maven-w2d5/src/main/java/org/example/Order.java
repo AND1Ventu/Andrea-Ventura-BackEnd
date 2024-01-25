@@ -83,4 +83,7 @@ public class Order {
                 ", products=" + products +
                 '}';
     }
+
+    public double getTotalSales() {
+    }
 }
