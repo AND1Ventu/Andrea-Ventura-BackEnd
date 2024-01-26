@@ -38,6 +38,29 @@ public class Main {
             // Salvare l'evento
             eventoDAO.save(evento);
 
+            // Creazione di una partita di calcio e salvataggio
+            PartitaDiCalcio partitaDiCalcio = new PartitaDiCalcio();
+
+
+
+
+
+
+
+
+
+            // Creazione e salvataggio Gara di Atletica
+            GaraDiAtletica garaDiAtletica = new GaraDiAtletica();
+
+
+
+
+
+
+
+
+
+
         } finally {
             entityManager.close();
             entityManagerFactory.close();

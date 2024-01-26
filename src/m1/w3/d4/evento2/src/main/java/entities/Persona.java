@@ -24,8 +24,33 @@ public class Persona {
     private Sesso sesso;
 
     @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL, orphanRemoval = true)
-    @OrderBy("")
     private List<Partecipazione> listaPartecipazioni;
+
+    @OneToMany(mappedBy = "vincitore")
+    private List<GaraDiAtletica> gareVinte;
+
+    @ManyToMany
+    @JoinTable(name = "persone_gare",
+            joinColumns = @JoinColumn(name = "persona_fk"),
+    inverseJoinColumns = @JoinColumn(name = "gare_fk"))
+    private Set<GaraDiAtletica> gare = new HashSet<>;
+
+
+    public List<GaraDiAtletica> getGareVinte() {
+        return gareVinte;
+    }
+
+    public void setGareVinte(List<GaraDiAtletica> gareVinte) {
+        this.gareVinte = gareVinte;
+    }
+
+    public Set<GaraDiAtletica> getGare() {
+        return gare;
+    }
+
+    public void setGare(Set<GaraDiAtletica> gare) {
+        this.gare = gare;
+    }
 
     public Persona() {
     }
