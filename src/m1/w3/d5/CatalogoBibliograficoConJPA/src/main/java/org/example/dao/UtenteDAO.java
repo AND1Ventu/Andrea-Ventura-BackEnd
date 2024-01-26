@@ -14,6 +14,7 @@ public class UtenteDAO {
 
     public UtenteDAO() {
         this.emf = Persistence.createEntityManagerFactory("catalogo_bibliotecario");
+
     }
 
     public void aggiungiUtente(Utente utente) {

@@ -4,6 +4,8 @@ import org.example.entities.*;
 import org.example.dao.*;
 
 
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -11,6 +13,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         CatalogoDAO catalogoDAO = new CatalogoDAO();
