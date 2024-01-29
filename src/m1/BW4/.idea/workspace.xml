@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bd30298a-91bf-4321-ab42-8366b950e91b" name="Changes" comment="branches">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BW4/src/main/java/dao/TicketDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../KARAWORLD/src/main/java/KaraokeSyncExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../KARAWORLD/src/main/java/KaraokeSyncExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Manutenzione.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Manutenzione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Mezzo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Mezzo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Percorso.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Percorso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/RivenditoreAutorizzato.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/RivenditoreAutorizzato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Tratta.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Tratta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Utente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BW4/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/BW4" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/BW4" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2bczhM5Qo0je1ASk3kkoAomv5aD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "AndreaV",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/andrea/IdeaProjects/corso_epicode/src/m1/BW4",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BW4/.idea" />
+      <recent name="$PROJECT_DIR$/BW4" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd30298a-91bf-4321-ab42-8366b950e91b" name="Changes" comment="" />
+      <created>1706529273280</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706529273280</updated>
+    </task>
+    <task id="LOCAL-00001" summary="primo commit">
+      <option name="closed" value="true" />
+      <created>1706529348312</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706529348312</updated>
+    </task>
+    <task id="LOCAL-00002" summary="persistence.xml">
+      <option name="closed" value="true" />
+      <created>1706535355156</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706535355156</updated>
+    </task>
+    <task id="LOCAL-00003" summary="pom.xml">
+      <option name="closed" value="true" />
+      <created>1706535687748</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706535687748</updated>
+    </task>
+    <task id="LOCAL-00004" summary="pom.xml">
+      <option name="closed" value="true" />
+      <created>1706535740506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706535740507</updated>
+    </task>
+    <task id="LOCAL-00005" summary="branches">
+      <option name="closed" value="true" />
+      <created>1706536731639</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706536731639</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="primo commit" />
+    <MESSAGE value="persistence.xml" />
+    <MESSAGE value="pom.xml" />
+    <MESSAGE value="branches" />
+    <option name="LAST_COMMIT_MESSAGE" value="branches" />
+  </component>
+</project>

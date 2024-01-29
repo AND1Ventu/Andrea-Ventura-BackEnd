@@ -28,7 +28,8 @@ public class KaraokeSyncExample {
             String[] lyricLines = lyrics.split("\n");
 
             JsonNode timingsNode = rootNode.get("timings");
-            int[] timings = objectMapper.treeToValue(timingsNode, int[].class);
+            int[] timings = (timingsNode != null) ? objectMapper.treeToValue(timingsNode, int[].class) : new int[0];
+
 
             startKaraoke(lyricLines, timings);
         } catch (Exception e) {
