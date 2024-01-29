@@ -1,0 +1,14 @@
+Jan 19, 2024 11:22:38 AM org.example.CatalogoBibliotecario logSuccess
+INFO: SUCCESS: Elemento aggiunto con successo.
+Jan 19, 2024 11:22:38 AM org.example.CatalogoBibliotecario logSuccess
+INFO: SUCCESS: Elemento aggiunto con successo.
+Jan 19, 2024 11:22:38 AM org.example.CatalogoBibliotecario logSuccess
+INFO: SUCCESS: Ricerca per ISBN eseguita con successo. Elemento trovato: ISBN: ISBN123, Titolo: Titolo Libro 1, Anno Pubblicazione: 2022, Pagine: 200, Autore: Autore 1, Genere: Genere 1
+Jan 19, 2024 11:22:38 AM org.example.CatalogoBibliotecario logSuccess
+INFO: SUCCESS: Ricerca per anno di pubblicazione eseguita con successo.
+Jan 19, 2024 11:22:38 AM org.example.CatalogoBibliotecario logSuccess
+INFO: SUCCESS: Ricerca per autore eseguita con successo.
+Jan 19, 2024 11:22:38 AM org.example.CatalogoBibliotecario logSuccess
+INFO: SUCCESS: Salvataggio su disco eseguito con successo.
+Jan 19, 2024 11:22:38 AM org.example.CatalogoBibliotecario logSuccess
+INFO: SUCCESS: Rimozione di tutti gli elementi eseguita con successo.

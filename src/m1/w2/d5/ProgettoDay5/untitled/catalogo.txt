@@ -1,0 +1,2 @@
+L;ISBN123;Titolo Libro 1;2022;200;Autore 1;Genere 1
+R;ISBN456;Titolo Rivista 1;2022;50;MENSILE
