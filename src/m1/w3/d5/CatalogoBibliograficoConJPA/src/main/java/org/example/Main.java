@@ -15,29 +15,29 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("Scegli un'operazione:");
+        System.out.println("1. Aggiungi Elemento del Catalogo");
+        System.out.println("2. Rimuovi Elemento del Catalogo");
+        System.out.println("3. Ricerca Elemento per ISBN");
+        System.out.println("4. Ricerca Elementi per Anno di Pubblicazione");
+        System.out.println("5. Ricerca Elementi per Autore");
+        System.out.println("6. Ricerca Elementi per Titolo");
+        System.out.println("7. Aggiungi Utente");
+        System.out.println("8. Rimuovi Utente");
+        System.out.println("9. Ricerca Utente per ID");
+        System.out.println("10. Ricerca Utenti per Nome");
+        System.out.println("11. Aggiungi Prestito");
+        System.out.println("12. Rimuovi Prestito");
+        System.out.println("13. Ricerca Prestito per ID");
+        System.out.println("14. Ricerca Prestiti Utente");
+        System.out.println("15. Ricerca Prestiti Scaduti Non Restituiti");
+        System.out.println("0. Esci");
         CatalogoDAO catalogoDAO = new CatalogoDAO();
         PrestitoDAO prestitoDAO = new PrestitoDAO();
         UtenteDAO utenteDAO = new UtenteDAO();
 
         while (true) {
-            System.out.println("Scegli un'operazione:");
-            System.out.println("1. Aggiungi Elemento del Catalogo");
-            System.out.println("2. Rimuovi Elemento del Catalogo");
-            System.out.println("3. Ricerca Elemento per ISBN");
-            System.out.println("4. Ricerca Elementi per Anno di Pubblicazione");
-            System.out.println("5. Ricerca Elementi per Autore");
-            System.out.println("6. Ricerca Elementi per Titolo");
-            System.out.println("7. Aggiungi Utente");
-            System.out.println("8. Rimuovi Utente");
-            System.out.println("9. Ricerca Utente per ID");
-            System.out.println("10. Ricerca Utenti per Nome");
-            System.out.println("11. Aggiungi Prestito");
-            System.out.println("12. Rimuovi Prestito");
-            System.out.println("13. Ricerca Prestito per ID");
-            System.out.println("14. Ricerca Prestiti Utente");
-            System.out.println("15. Ricerca Prestiti Scaduti Non Restituiti");
-            System.out.println("0. Esci");
+
 
             int choice = scanner.nextInt();
             scanner.nextLine();

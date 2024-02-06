@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd30298a-91bf-4321-ab42-8366b950e91b" name="Changes" comment="branches">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BW4/src/main/java/dao/TicketDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../KARAWORLD/src/main/java/KaraokeSyncExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../KARAWORLD/src/main/java/KaraokeSyncExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Manutenzione.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Manutenzione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Mezzo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Mezzo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Percorso.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Percorso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/RivenditoreAutorizzato.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/RivenditoreAutorizzato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Tratta.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Tratta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/entities/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/entities/Utente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BW4/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    <list default="true" id="bd30298a-91bf-4321-ab42-8366b950e91b" name="Changes" comment="TicketDAO">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BW4/src/main/java/dao/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BW4/src/main/java/dao/TicketDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +21,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/BW4" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/BW4/src/main/java/dao/TicketDAO.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
@@ -49,7 +42,8 @@
     "last_opened_file_path": "/Users/andrea/IdeaProjects/corso_epicode/src/m1/BW4",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.sync"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -115,7 +109,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706536731639</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="TicketDAO">
+      <option name="closed" value="true" />
+      <created>1706542949791</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706542949791</updated>
+    </task>
+    <task id="LOCAL-00007" summary="TicketDAO">
+      <option name="closed" value="true" />
+      <created>1706543150253</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706543150253</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -123,6 +133,7 @@
     <MESSAGE value="persistence.xml" />
     <MESSAGE value="pom.xml" />
     <MESSAGE value="branches" />
-    <option name="LAST_COMMIT_MESSAGE" value="branches" />
+    <MESSAGE value="TicketDAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="TicketDAO" />
   </component>
 </project>
