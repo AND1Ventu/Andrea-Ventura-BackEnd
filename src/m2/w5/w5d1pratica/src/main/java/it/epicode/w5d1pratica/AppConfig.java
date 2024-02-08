@@ -1,9 +1,7 @@
 package it.epicode.w5d1pratica;
 
-import it.epicode.w5d1pratica.bean.Drink;
-import it.epicode.w5d1pratica.bean.Menu;
-import it.epicode.w5d1pratica.bean.Pizza;
-import it.epicode.w5d1pratica.bean.Topping;
+import it.epicode.w5d1pratica.bean.*;
+import lombok.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,7 +12,7 @@ public class AppConfig {
 
     @Bean("water")
     public Drink water(){
-        Drink water new Drink();
+        Drink water = new Drink();
         water.setNome("Water");
         water.setCalorie(0);
         water.setPrezzo(1);
@@ -23,7 +21,7 @@ public class AppConfig {
 
     @Bean("cocaCola")
     public Drink cocaCola(){
-        Drink cocaCola new Drink();
+        Drink cocaCola = new Drink();
         cocaCola.setNome("Coca Cola");
         cocaCola.setCalorie(200);
         cocaCola.setPrezzo(2);
@@ -84,7 +82,7 @@ public class AppConfig {
 
     @Bean("margheritaSalame")
     public Pizza margheritaSalame(){
-        Pizza margheritaSalame = margherita()
+        Pizza margheritaSalame = margherita();
         margheritaSalame.setNome("Pizza Diavola");
         margheritaSalame.setCalorie(
                 margheritaSalame.getCalorie() + salame().getCalorie()
@@ -109,5 +107,25 @@ public class AppConfig {
                 List.of(margherita(), margheritaSalame())
         );
         return menu;
+    }
+
+    @Bean("tavolo1")
+    public Table tavolo1(@Value("${tavolo1.coperto}") String coperto){
+        Table tavolo = new Table();
+        tavolo.setNumero(1);
+        tavolo.setStatoTavolo(TableState.LIBERO);
+        tavolo.setNumeroMaxCoperti(6);
+        tavolo.setCostoCoperto(Double.parseDouble(coperto));
+        return tavolo;
+    }
+
+    @Bean("tavolo2")
+    public Table tavolo2(@Value("${tavolo2.coperto}") String coperto){
+        Table tavolo = new Table();
+        tavolo.setNumero(2);
+        tavolo.setStatoTavolo(TableState.LIBERO);
+        tavolo.setNumeroMaxCoperti(8);
+        tavolo.setCostoCoperto(Double.parseDouble(coperto));
+        return tavolo;
     }
 }

@@ -1,6 +1,8 @@
 package it.epicode.w5d1pratica.bean;
 
 import lombok.Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -9,23 +11,24 @@ public class Menu {
     private List<Drink> drinks;
     private List<Topping> toppings;
     private List<Pizza> pizze;
+    private Logger logger = LoggerFactory.getLogger("w5d2p");
 
     public void stampaMenu(){
-        System.out.println("PIZZE");
+        logger.info("PIZZE");
         pizze.stream().forEach(pizza ->
-                System.out.println(pizza.getNome() +
+                logger.info(pizza.getNome() +
                         ", calorie: " + pizza.getCalorie() +
                         ", prezzo: " + pizza.getPrezzo()));
-        System.out.println();
-        System.out.println("TOPPINGS");
+
+        logger.info("TOPPINGS");
         toppings.stream().forEach(topping ->
-                System.out.println(topping.getNome() +
+                logger.info(topping.getNome() +
                         ", calorie: " + topping.getCalorie() +
                         ", prezzo: " + topping.getPrezzo()));
-        System.out.println();
-        System.out.println("DRINKS");
+
+        logger.info("DRINKS");
         drinks.stream().forEach(drink ->
-                System.out.println(drink.getNome() +
+                logger.info(drink.getNome() +
                         ", calorie: " + drink.getCalorie() +
                         ", prezzo: " + drink.getPrezzo()));
     }
