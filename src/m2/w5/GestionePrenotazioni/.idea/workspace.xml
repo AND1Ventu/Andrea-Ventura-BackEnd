@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ddf0d512-9bae-45a5-92e5-9c6a5a693990" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/repository/Drink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/repository/ItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/repository/MenuRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/service/Drink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/service/MenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w5d1pratica/src/main/java/it/epicode/w5d1pratica/bean/Topping.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2c7jz0jASykluP0KDWhrL9jlQUJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ddf0d512-9bae-45a5-92e5-9c6a5a693990" name="Changes" comment="" />
+      <created>1707469773734</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707469773734</updated>
+    </task>
+    <servers />
+  </component>
+</project>

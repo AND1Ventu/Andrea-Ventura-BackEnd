@@ -1,5 +1,6 @@
 package it.epicode.w5d1pratica.bean;
 
+import jakarta.persistence.*;
 import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,11 +8,22 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 @Data
+@Entity
 public class Menu {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    @OneToMany(mappedBy = "menu")
     private List<Drink> drinks;
+
+    @OneToMany(mappedBy = "menu")
     private List<Topping> toppings;
+
+    @OneToMany(mappedBy = "menu")
     private List<Pizza> pizze;
-    private Logger logger = LoggerFactory.getLogger("w5d2p");
+
+    //private Logger logger = LoggerFactory.getLogger("w5d2p");
 
     public void stampaMenu(){
         logger.info("PIZZE");
