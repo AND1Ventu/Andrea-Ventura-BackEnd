@@ -1,7 +1,6 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Autore;
-import com.example.demo.model.BlogPost;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +15,7 @@ public class AutoreService {
         return autori;
     }
 
-    public BlogPost cercaAutorePerId(int id) throws NoSuchElementException {
+    public boolean cercaAutorePerId(int id) throws NoSuchElementException {
         Optional<Autore> a = autori.stream().filter(autore -> autore.getId()==id).findAny();
 
         if(a.isPresent()){
@@ -27,11 +26,12 @@ public class AutoreService {
         }
     }
 
-    public void salvaAutore(Autore autore){
+    public Autore salvaAutore(Autore autore){
         autori.add(autore);
+        return autore;
     }
 
-    public BlogPost aggiornaAutore(int id, Autore autore) throws NoSuchElementException{
+    public Autore aggiornaAutore(int id, Autore autore) throws NoSuchElementException{
         Autore a = cercaAutorePerId(id);
 
         a.setNome(autore.getNome());

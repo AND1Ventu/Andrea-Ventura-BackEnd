@@ -49,7 +49,7 @@ public class AutoreController {
     }
 
     @DeleteMapping("/autori/{id}")
-    public ResponseEntity<Void> deleteAuthor(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteAuthor(@PathVariable int id) {
         if (autoreService.cercaAutorePerId(id)) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
