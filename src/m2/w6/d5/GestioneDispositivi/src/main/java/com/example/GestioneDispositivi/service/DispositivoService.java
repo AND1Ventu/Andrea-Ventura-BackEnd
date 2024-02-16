@@ -5,6 +5,7 @@ import com.example.GestioneDispositivi.model.Dipendente;
 import com.example.GestioneDispositivi.model.Dispositivo;
 import com.example.GestioneDispositivi.model.DispositivoRequest;
 import com.example.GestioneDispositivi.repository.DispositivoRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -55,4 +56,17 @@ public class DispositivoService {
         Dispositivo device = findDeviceById(id);
         dispositivoRepository.delete(device);
     }
+
+    public Dispositivo setDeviceToUser(int deviceId, int userId) {
+        Dispositivo dispositivo = findDeviceById(deviceId);
+        Dipendente dipendente = dipendenteService.findById(userId);
+
+        if (dispositivo != null && dipendente != null) {
+            dispositivo.setDipendente(dipendente);
+            return saveDevice(dispositivo);
+        } else {
+            throw new EntityNotFoundException("Dispositivo o Dipendente non trovato");
+        }
+    }
+
 }

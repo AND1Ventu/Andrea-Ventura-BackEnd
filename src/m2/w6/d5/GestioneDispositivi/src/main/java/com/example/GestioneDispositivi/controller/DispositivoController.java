@@ -38,7 +38,7 @@ public class DispositivoController {
     }
 
     @PutMapping("/dispositivi/{id}")
-    public Dispositivo updateBlogPost(
+    public Dispositivo updateDevice(
             @PathVariable int id,
             @RequestBody @Validated DispositivoRequest dispositivoRequest, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
@@ -52,5 +52,11 @@ public class DispositivoController {
     public void deleteDevice(@PathVariable int id){
         dispositivoService.deleteDevice(id);
     }
+
+    @PutMapping("/dispositivi/{id}/setUser/{id_user}")
+    public Dispositivo setDeviceToUser(@PathVariable int id, @PathVariable int id_user) {
+        return dispositivoService.setDeviceToUser(id, id_user);
+    }
+
 
 }
