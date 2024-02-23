@@ -18,7 +18,7 @@ public class EventRequest {
     @NotBlank(message = "Il campo 'description' non può essere vuoto")
     private String description;
 
-    @NotBlank(message = "Il campo 'date' non può essere vuoto")
+    @NotNull(message = "Il campo 'date' non può essere vuoto")
     private LocalDate date;
 
     @NotBlank(message = "Il campo 'location' non può essere vuoto")
