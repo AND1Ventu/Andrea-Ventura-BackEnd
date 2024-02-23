@@ -1,10 +1,12 @@
 package com.exercise.gestioneEventi.service;
 
+import com.exercise.gestioneEventi.exception.BadRequestException;
 import com.exercise.gestioneEventi.model.Event;
 import com.exercise.gestioneEventi.dto.EventRequest;
 import com.exercise.gestioneEventi.repository.EventRepository;
 import com.exercise.gestioneEventi.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,7 +33,7 @@ public class EventService {
                 .orElseThrow(() -> new NotFoundException("Evento non trovato"));
     }
 
-    public List<Event> getAllEvents() {
+    public List<Event> getAllEvents(Pageable pageable) {
         return eventRepository.findAll();
     }
 
@@ -48,6 +50,19 @@ public class EventService {
 
     public void deleteEvent(int eventId) {
         eventRepository.deleteById(eventId);
+    }
+
+    public Event bookSeats(int eventId, int seatsToBook) {
+        Event event = getEventById(eventId);
+
+        int availableSeats = event.getAvailableSeats() - event.getBookedSeats();
+
+        if (seatsToBook <= availableSeats) {
+            event.setBookedSeats(event.getBookedSeats() + seatsToBook);
+            return eventRepository.save(event);
+        } else {
+            throw new BadRequestException("Posti non disponibili");
+        }
     }
 }
 

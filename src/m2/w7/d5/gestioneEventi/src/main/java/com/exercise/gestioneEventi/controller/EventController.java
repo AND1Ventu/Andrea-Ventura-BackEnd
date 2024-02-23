@@ -48,4 +48,9 @@ public class EventController {
     public void deleteEvent(@PathVariable int id){
         eventService.deleteEvent(id);
     }
+
+    @PostMapping("/event/{id}/book")
+    public Event bookSeats(@PathVariable int id, @RequestParam int seatsToBook) {
+        return eventService.bookSeats(id, seatsToBook);
+    }
 }

@@ -24,6 +24,20 @@ public class Event {
 
     @ManyToMany(mappedBy = "participants")
     private Set<User> participants = new HashSet<>();
+
+    public Integer getBookedSeats() {
+        return participants.size();
+    }
+
+    public void setBookedSeats(int bookedSeats) {
+        int newAvailableSeats = availableSeats - bookedSeats;
+
+        if (newAvailableSeats >= 0) {
+            this.availableSeats = newAvailableSeats;
+        } else {
+            throw new IllegalArgumentException("Il numero di posti prenotati supera i posti disponibili.");
+        }
+    }
 }
 
 

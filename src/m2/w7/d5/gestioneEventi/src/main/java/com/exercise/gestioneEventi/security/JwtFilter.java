@@ -42,10 +42,10 @@ public class JwtFilter extends OncePerRequestFilter {
         String username = jwtTools.extractUsernameFromToken(token);
 
         User utente = userService.getUserByUsername(username);
-//codice per autorizzare il servizio solo a utenti che cercano info sul proprio id/username
-        checkPathVariable(request, utente);
-//fine gestione precedente
-        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(utente, null, utente.getAuthorities());
+        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+                utente,
+                null,
+                utente.getAuthorities());
         //authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
         //authentication.setAuthenticated(true);
         SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -60,23 +60,4 @@ public class JwtFilter extends OncePerRequestFilter {
         return new AntPathMatcher().match("/auth/**", request.getServletPath());
     }
 
-    private void checkPathVariable(HttpServletRequest request, User utente){
-        String[] parts = request.getServletPath().split("/");
-        System.out.println(parts.length);
-        Arrays.stream(parts).forEach(System.out::println);
-        if(parts.length==3) {
-            if (parts[1].equals("autori")) {
-                int id = Integer.parseInt(parts[2]);
-
-                if(utente.getId()!=id){
-                    throw new UnAuthorizedException("Non sei abilitato ad utilizzare il servizio per id differenti dal tuo");
-                }
-
-            } else if (parts[1].equals("utenti")) {
-                if(!utente.getUsername().equals(parts[2])){
-                    throw new UnAuthorizedException("Non sei abilitato ad utilizzare il servizio per un username differente dal tuo");
-                }
-            }
-        }
-    }
 }

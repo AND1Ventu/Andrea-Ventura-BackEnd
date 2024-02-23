@@ -31,7 +31,7 @@ public class UserService {
         return saveUserWithRole(userRequest, Role.UTENTE);
     }
 
-    private User saveUserWithRole(UserRequest userRequest, Role role) {
+    public User saveUserWithRole(UserRequest userRequest, Role role) {
         User utente = new User();
         utente.setUsername(userRequest.getUsername());
         utente.setPassword(encoder.encode(userRequest.getPassword()));
@@ -61,6 +61,7 @@ public class UserService {
 
     public User updateRoleUser(String username, String role) {
         User utente = getUserByUsername(username);
+        System.out.println(utente);
         try {
             Role userRole = Role.valueOf(role);
             utente.setRole(userRole);

@@ -1,5 +1,6 @@
 package com.exercise.gestioneEventi.dto;
 
+import com.exercise.gestioneEventi.model.Role;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
@@ -9,4 +10,5 @@ public class LoginRequest {
     private String username;
     @NotBlank(message = "password obbligatoria")
     private String password;
+
 }

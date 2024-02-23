@@ -24,12 +24,14 @@ public class AuthController {
     @Autowired
     private PasswordEncoder encoder;
     @PostMapping("/auth/register")
-    public User register(@RequestBody @Validated UserRequest userRequest, BindingResult bindingResult){
+    public User register(
+            @RequestBody @Validated UserRequest userRequest,
+            BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             throw new BadRequestException(bindingResult.getAllErrors().toString());
         }
 
-        return userService.saveUser(userRequest);
+        return userService.saveUserWithRole(userRequest, userRequest.getRole());
     }
 
     @PostMapping("/auth/login")
