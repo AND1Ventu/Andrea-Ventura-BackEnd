@@ -36,10 +36,10 @@ public class SecurityChain {
                 authorizeRequests
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers("/utenti/**").hasAnyAuthority(Role.AMMINISTRATORE.name())
-                        .requestMatchers("/events/**").hasAnyAuthority(Role.AMMINISTRATORE.name())
-                        .requestMatchers(HttpMethod.POST, "/events").hasAnyAuthority(Role.ORGANIZZATORE.name(), Role.AMMINISTRATORE.name())
-                        .requestMatchers(HttpMethod.PUT, "/events/**").hasAnyAuthority(Role.ORGANIZZATORE.name(), Role.AMMINISTRATORE.name())
-                        .requestMatchers(HttpMethod.DELETE, "/events/**").hasAnyAuthority(Role.ORGANIZZATORE.name(), Role.AMMINISTRATORE.name())
+                        .requestMatchers("/event/**").hasAnyAuthority(Role.AMMINISTRATORE.name())
+                        .requestMatchers(HttpMethod.POST, "/event").hasAnyAuthority(Role.ORGANIZZATORE.name(), Role.AMMINISTRATORE.name())
+                        .requestMatchers(HttpMethod.PUT, "/event/**").hasAnyAuthority(Role.ORGANIZZATORE.name(), Role.AMMINISTRATORE.name())
+                        .requestMatchers(HttpMethod.DELETE, "/event/**").hasAnyAuthority(Role.ORGANIZZATORE.name(), Role.AMMINISTRATORE.name())
                         .requestMatchers(HttpMethod.POST, "/event/{id}/book").permitAll()
                         .anyRequest().denyAll()
         );
